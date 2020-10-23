@@ -284,9 +284,7 @@ app.get('/api/size/:size', (req, res) => {
 app.delete('/api/delete/:coffee', (req, res) => {
     (async () => {
         try {
-            //const selectedSize = req.params.coffee;
-            const document = db.collection('coffee').doc(req.params.coffee);
-            //const document = db.collection('coffee').where('coffee', '==', coffee);
+            const document = db.collection('coffee').where('coffee', '==', coffee);
             await document.delete();
             return res.status(200).send();
         } catch (error) {
@@ -297,19 +295,50 @@ app.delete('/api/delete/:coffee', (req, res) => {
     })();
 });
 
-// app.delete('/api/delete/:id', (req, res) => {
-//     (async () => {
-//         try {
-//             const document = db.collection('coffee').doc(req.params.id);
-//             await document.delete();
-//             return res.status(200).send();
-//         } catch (error) {
-//             console.log(error);
-//             return res.status(500).send(error);
-//         }
+//DELETE a specific email address
+app.delete('/api/delete/:email', (req, res) => {
+    (async () => {
+        try {
+            const document = db.collection('coffee').where('email', '==', email);
+            await document.delete();
+            return res.status(200).send();
+        } catch (error) {
+            console.log(error);
+            return res.status(500).send(error);
+        }
 
-//     })();
-// });
+    })();
+});
+
+//DELETE a specific flavor
+app.delete('/api/delete/:flavor', (req, res) => {
+    (async () => {
+        try {
+            const document = db.collection('coffee').where('flavor', '==', flavor);
+            await document.delete();
+            return res.status(200).send();
+        } catch (error) {
+            console.log(error);
+            return res.status(500).send(error);
+        }
+
+    })();
+});
+
+//DELETE a specific size
+app.delete('/api/delete/:size', (req, res) => {
+    (async () => {
+        try {
+            const document = db.collection('coffee').where('size', '==', size);
+            await document.delete();
+            return res.status(200).send();
+        } catch (error) {
+            console.log(error);
+            return res.status(500).send(error);
+        }
+
+    })();
+});
 
 //export the api to firebase cloud functions
 exports.app = functions.https.onRequest(app);

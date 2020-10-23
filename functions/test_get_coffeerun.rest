@@ -1,0 +1,31 @@
+// install the "REST Client" extension in VSCode.
+@baseUrl=localhost:5001/fir-coffeerun-fb27b/us-central1/app
+
+# get all orders
+GET http://{{baseUrl}}/api/read HTTP/1.1
+
+###
+
+# get a specific coffee
+GET http://{{baseUrl}}/api/coffee/black HTTP/1.1
+
+###
+
+# get a specific email
+GET http://{{baseUrl}}/api/email/jack@me.com HTTP/1.1
+
+###
+
+# get a specific flavor
+GET http://{{baseUrl}}/api/flavor/blueberry HTTP/1.1
+
+###
+
+# get a specific strength
+GET http://{{baseUrl}}/api/strength/30 HTTP/1.1
+
+###
+
+# get a specific size
+GET http://{{baseUrl}}/api/size/tall HTTP/1.1
+

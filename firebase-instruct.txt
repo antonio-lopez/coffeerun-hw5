@@ -1,0 +1,25 @@
+create container
+create firebase project in firebase console
+create database Cloud Firestore [run in test mode for read and writing]
+install firebase tools in container [ npm -g install firebase-tools ]
+foreward ports
+run [ firebase login ]
+follow link to login
+run [ firebase init ]
+CHOICES
+    functions: configure and deploy Cloud functions
+    use and existing project
+    [choose your project from firebase]
+    Javascript language
+    use ESLint
+    install dependencies with npm now
+
+run [ npm i express]
+run [ npm i cors ]
+
+update index.js in functions directory
+
+cd functions/
+
+npm run serve
+

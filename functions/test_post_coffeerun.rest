@@ -1,0 +1,75 @@
+// install the "REST Client" extension in VSCode.
+// @baseUrl=co.audstanley.com
+@baseUrl=localhost:5001/fir-coffeerun-fb27b/us-central1/app
+
+###
+
+# add new order for double espresso
+POST http://{{baseUrl}}/api/create HTTP/1.1
+content-type: application/json
+
+{
+    "coffee": "triple espresso",
+    "emailAddress": "audstanley@gmail.com",
+    "size": "tall",
+    "flavor": "Pumpkin Spice",
+    "strength": "100"
+}
+
+###
+
+# add new order for espresso
+POST http://{{baseUrl}}/api/create HTTP/1.1
+content-type: application/json
+
+{
+    "coffee": "espresso",
+    "emailAddress": "aeinstein@aol.com",
+    "size": "grande",
+    "flavor": "Mocha",
+    "strength": "80"
+}
+
+###
+
+# add new order for americano
+POST http://{{baseUrl}}/api/create HTTP/1.1
+content-type: application/json
+
+{
+    "coffee": "americano",
+    "emailAddress": "sjobs@apple.com",
+    "size": "short",
+    "flavor": "Caramel",
+    "strength": "60"
+}
+
+###
+
+# add new order for earl grey
+POST http://{{baseUrl}}/api/create HTTP/1.1
+content-type: application/json
+
+{
+    "coffee": "earl grey",
+    "emailAddress": "jlpicard@starfleet.com",
+    "size": "tall",
+    "flavor": "None",
+    "strength": "80"
+}
+
+###
+
+# add new order for earl grey
+POST http://{{baseUrl}}/api/create HTTP/1.1
+content-type: application/json
+
+{
+    "coffee": "scotch coffee",
+    "emailAddress": "mscott@starfleet.com",
+    "size": "tall",
+    "flavor": "None",
+    "strength": "65"
+}
+
+###
